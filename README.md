@@ -1,2 +1,4 @@
 # [PU] Dev Challenge
-npm i and then enjoy!
+- npm i
+- npm run dev  
+and then enjoy!
