@@ -2,9 +2,9 @@ import React, { useRef, useState, useEffect } from "react"
 import "./App.css"
 import Chart from "./component/Chart.jsx"
 import { ArrowIcon } from "./assets/icon/ArrowIcon.jsx"
+
 function App() {
   const [isFilp, setIsFilp] = useState(false)
-  const [rotateArrow, setRotateArrow] = useState(false)
 
   const caseElement = useRef(null)
   const scrollToTop = () => {
@@ -14,19 +14,18 @@ function App() {
       behavior: "smooth",
     })
   }
+
   const scrollToCase = () => {
     if (caseElement.current) {
-      caseElement.current.scrollIntoView({ behavior: "smooth" }) // Add behavior and specify "smooth" scrolling
+      caseElement.current.scrollIntoView({ behavior: "smooth" })
     }
   }
 
   const handleScroll = () => {
     if (window.scrollY > 100) {
       setIsFilp(true)
-      setRotateArrow(true)
     } else {
       setIsFilp(false)
-      setRotateArrow(false)
     }
   }
 
@@ -45,14 +44,14 @@ function App() {
           <button onClick={isFilp ? scrollToTop : scrollToCase}>
             <ArrowIcon
               className={`border border-[#636363] hover:border-[#ACACAC] text-[#636363] rounded-full text-2xl hover:text-[#ACACAC] duration-500 ${
-                rotateArrow ? "rotate180" : ""
+                isFilp ? "rotate180" : ""
               }`}
             />
           </button>
         </div>
         <div className="w-full bg-black ">
           <div className="max-w-[720px] mx-auto p-5 w-full h-screen text-white flex justify-center items-center">
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-5 md:gap-10">
               <h1 className="md:text-[164px] text-center md:leading-[164px] text-[96px]  leading-[96px]">
                 ม.๑๑๒
               </h1>

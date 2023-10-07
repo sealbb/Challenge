@@ -2,8 +2,8 @@
 
 #root{
   font-family: 'IBM Plex Sans Thai', sans-serif;
-/* font-family: 'Inter', sans-serif; */
 }
+
 .reset-text {
   color: blue;
   text-decoration: underline;
@@ -11,27 +11,4 @@
 
 .rotate180 {
   transform: rotate(180deg);
-  transition: transform 0.5s ease; /* Adjust the duration and easing as needed */
-}
-
-.lot2{
-  /* transform:  rotate(180deg); */
-  color: #636363;
-  transition-duration: 500ms;
-  /* animation: yourAnimation 5s linear 0s infinite normal none; */
-}
-@keyframes yourAnimation{
-  100% {transform:  rotate(180deg);
-  }
-}
-.lot{
-  color: blue;
-}
-
-/* ซ่อนหัวลูกศรและเส้นตัดแกน y */
-.y-axis .tick line,
-.y-axis .domain {
-  /* display: none; */
-  /* color: gray; */
-  list-style:  none;
 }
